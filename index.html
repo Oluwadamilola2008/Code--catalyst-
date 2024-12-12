@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" 
+          content="ie=edge">
+
+    <title>Community Application Form</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- Add any external CSS file if applicable -->
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Join Our Community</h1>
+
+        <p>Please fill out the form below to apply for membership in our community.</p>
+
+        <form action="/submit-form" method="POST" enctype="multipart/form-data"> <!-- Specify the form action and method -->
+
+            <div class="form-group">
+
+                <label for="profile-picture">Profile Picture (optional)</label>
+
+                <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="role">Current Role</label>
+
+                <input type="text" id="role" name="role" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="experience">Years of Experience</label> 
+
+                <input type="number" id="experience" name="experience" min="0" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="expertise">Areas of Expertise</label>
+
+                <input type="text" id="expertise" name="expertise" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="profile-link">LinkedIn / GitHub / Portfolio URL</label>
+
+                <input type="url" id="profile-link" name="profile-link">
+
+            </div>
+
+            
+
+            <div class="form-group">
+
+                <label for="reason">Why do you want to join the community?</label>
+
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Are you interested in collaborating on projects?</label>
+
+                <select id="collaborate" name="collaborate">
+
+                    <option value="yes">Yes</option>
+
+                    <option value="no">No</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>What topics are you most interested in?</label>
+
+                <select id="topics" name="topics[]" multiple>
+
+                    <option value="AI">AI</option>
+
+                    <option value="Web Development">Web Development</option>
+
+                    <option value="Cloud">Full Stack Engineering</option>
+
+                    <option value="Open Source">Back End Engineering</option>
+
+                    <option value="Data Science">Data Science</option>
+
+                    <option value="DevOps">Front End Engineering</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group checkbox">
+
+                <input type="checkbox" id="agree" name="agree" required>
+
+                <label for="agree">I agree to the community's code of conduct</label>
+
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
